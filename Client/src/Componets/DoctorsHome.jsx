@@ -10,7 +10,7 @@ const DoctorsHome = ({doctorRef}) => {
  
    const loadDoctor = async()=>{
     try {
-      const res = await axios.get("http://prescrepto-119f.onrender.com/api/doctor/getAllDoctors")
+      const res = await axios.get("https://prescrepto-119f.onrender.com/api/doctor/getAllDoctors")
       if(!res){
         toast.message("No doctor found")
       }

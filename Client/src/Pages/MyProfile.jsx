@@ -114,7 +114,7 @@ const MyProfile = () => {
     try {
       
       setEditProfile(false);
-      const res = await axios.patch("http://prescrepto-119f.onrender.com/api/user/saveProfile",profileData, {
+      const res = await axios.patch("https://prescrepto-119f.onrender.com/api/user/saveProfile",profileData, {
     headers: {
       Authorization: `Bearer ${token}`
     }})

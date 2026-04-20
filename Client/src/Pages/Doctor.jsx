@@ -45,7 +45,7 @@ const handleClick = async(id)=>{
 
     // ✅ get user name FIRST
     const resUser = await axios.get(
-      "http://localhost:3000/api/user/getuser",
+      "https://prescrepto-119f.onrender.com/api/user/getuser",
       {
         params: { email: decoded.email }
       }
@@ -64,7 +64,7 @@ const handleClick = async(id)=>{
 
     console.log(bookingData)
 
-   const res = await axios.post("http://localhost:3000/api/user/booking",bookingData,{
+   const res = await axios.post("https://prescrepto-119f.onrender.com/api/user/booking",bookingData,{
      headers: {
                     Authorization: `Bearer ${token}`, // send token in header
                 },
@@ -92,17 +92,14 @@ const handleClick = async(id)=>{
 
   const fetchdoctor = async () => {
   try {
-    const res = await axios.get("http://localhost:3000/api/doctor/getalldoctors");
+    const res = await axios.get("https://prescrepto-119f.onrender.com/api/doctor/getalldoctors");
 
     const list = res.data.data;
     setDoctorlist(list);
 
     console.log("URL ID:", id);
-    const cleanId = id.replace(",", "").trim();
-
-    const data = list.find(
-      (doc) => doc._id.toString() === cleanId
-    );
+    
+    const data = list.find((doc) => doc._id === id);
 
     console.log("FOUND DOCTOR:", data);
 
@@ -114,7 +111,7 @@ const handleClick = async(id)=>{
 };
 
   
-  const doctor = doctorlist.find((doc) => doc._id == id);
+ 
   
 
   useEffect(()=>{

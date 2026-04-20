@@ -98,8 +98,12 @@ const handleClick = async(id)=>{
     setDoctorlist(list);
 
     console.log("URL ID:", id);
+
+    const cleanId = id.replace(",", "").trim();
+
+    const data = list.find((doc) => doc._id === cleanId);
     
-    const data = list.find((doc) => doc._id === id);
+   
 
     console.log("FOUND DOCTOR:", data);
 

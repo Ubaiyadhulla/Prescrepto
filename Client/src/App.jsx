@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
 import Navbar from './Componets/Navbar'
-import Home from './Pages/home'
+import Home from './Pages/Home'
 import AllDoctor from './Pages/AllDoctor'
 import Contect from './Pages/Contect'
 import About from './Pages/About'

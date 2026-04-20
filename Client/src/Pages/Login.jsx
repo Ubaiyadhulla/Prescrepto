@@ -21,7 +21,7 @@ const Login = () => {
      e.preventDefault();
     try{
       if(state == "signup"){
-         const res = await axios.post("http://localhost:3000/api/user/register",formData)
+         const res = await axios.post("http://prescrepto-119f.onrender.com/api/user/register",formData)
          console.log(res.data)
          if(res.data.success){
           setState('login')
